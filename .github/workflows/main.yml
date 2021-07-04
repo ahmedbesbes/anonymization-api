@@ -26,4 +26,4 @@ jobs:
           host: ${{ secrets.HOST}}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          script: echo "hello there, I am inside the VM"
+          script: echo "hello there, I am inside the VM!"
