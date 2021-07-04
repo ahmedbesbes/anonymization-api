@@ -32,7 +32,7 @@ class ModelSize(str, Enum):
 class UserRequestIn(BaseModel):
     text: str
     model_language: ModelLanguage = "en"
-    model_size = "sm"
+    model_size: ModelSize = "sm"
 
 
 class EntityOut(BaseModel):

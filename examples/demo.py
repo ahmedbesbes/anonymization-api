@@ -3,8 +3,6 @@ from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from typing import Optional
 
-from starlette.responses import Response
-
 
 class Application(BaseModel):
     first_name: str
