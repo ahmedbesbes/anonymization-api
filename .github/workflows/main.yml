@@ -29,4 +29,5 @@ jobs:
           script: |
             git clone git@github.com:ahmedbesbes/anonymization-api.git
             cd anonymization-api
+            sudo docker-compose build
             sudo docker-compose up -d
