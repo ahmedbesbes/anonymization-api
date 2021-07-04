@@ -1,15 +1,21 @@
 from copy import deepcopy
 from fastapi import FastAPI
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from typing import List
 from enum import Enum
 import spacy
 
 
-models = {
-    "en_sm": spacy.load("api/ml/models/en_sm"),
-    "fr_sm": spacy.load("api/ml/models/fr_sm"),
-}
+def load_models():
+    models = {
+        "en_sm": spacy.load("api/ml/models/en_sm"),
+        "fr_sm": spacy.load("api/ml/models/fr_sm"),
+    }
+    print("models loaded from disk")
+    return models
+
+
+models = load_models()
 
 
 class ModelLanguage(str, Enum):
@@ -73,6 +79,4 @@ def extract_entities(user_request: UserRequestIn):
         anonymized_text[start:end] = "X" * (end - start)
 
     anonymized_text = "".join(anonymized_text)
-    print("anonymized text : ", anonymized_text)
-
     return {"entities": entities, "anonymized_text": anonymized_text}

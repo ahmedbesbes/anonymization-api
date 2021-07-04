@@ -12,6 +12,7 @@ jupyter = "*"
 matplotlib = "*"
 spacy = "*"
 uvicorn = "*"
+fastapi-cache2 = "*"
 
 [dev-packages]
 black = "*"
