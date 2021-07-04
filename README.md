@@ -1,6 +1,6 @@
-## Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
+# Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
 
-### Launch an EC2 instance
+## 1- Launch an EC2 instance
 
 Connect to your AWS account, go the EC2 section and pick a distribution. I recommend Ubuntu 20.04 LTS for this tutorial.
 
@@ -42,7 +42,7 @@ Then add to the instance security groups:
 
 Now the instance is ready to accept requests.
 
-### SSH to the instance and configure it
+## 2- SSH to the instance and configure it
 
 SSH into the instance using your terminal.
 
@@ -50,7 +50,7 @@ SSH into the instance using your terminal.
 
 - Generate an ssh key and add it to your Github account so that it can perform git clones seamlessly
 
-### Configure a Gihub Actions workflow
+## 3- Configure a Gihub Actions workflow
 
 1- Go to your repo and click on the **Actions** tab
 
