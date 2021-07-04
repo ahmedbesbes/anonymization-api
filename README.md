@@ -1,8 +1,56 @@
-# Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
+## Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
 
-## Launch an EC2 instance
+### Launch an EC2 instance
 
-## Configure a Gihub Actions workflow
+Connect to your AWS account, go the EC2 section and pick a distribution. I recommend Ubuntu 20.04 LTS for this tutorial.
+
+<p align="center">
+    <img src="./images/aws_1.png"/>
+</p>
+
+Pick an instance: we're not gonna go crazy here. We'll just pick a relatively small one: a `t2.medium`.
+
+<p align="center">
+    <img src="./images/aws_2.png"/>
+</p>
+
+I changed the default storage to 30GB but you can leave it to 8GB (default value)
+
+<p align="center">
+    <img src="./images/aws_3.png"/>
+</p>
+
+Now launch the instance.
+
+Create an elastic IP address and associate it to the running instance. This way this IP won't change everytime the we restart the instance.
+
+<p align="center">
+    <img src="./images/aws_4.png"/>
+</p>
+
+Add a new security group (I named it fastapi) to allow inbound traffic on port 8000.
+
+<p align="center">
+    <img src="./images/aws_5.png"/>
+</p>
+
+Then add to the instance security groups:
+
+<p align="center">
+    <img src="./images/aws_6.png"/>
+</p>
+
+Now the instance is ready to accept requests.
+
+### SSH to the instance and configure it
+
+SSH into the instance using your terminal.
+
+- Install `docker` and `docker-compose` by following the official Docker [documentation](https://docs.docker.com/engine/install/ubuntu/)
+
+- Generate an ssh key and add it to your Github account so that it can perform git clones seamlessly
+
+### Configure a Gihub Actions workflow
 
 1- Go to your repo and click on the **Actions** tab
 
