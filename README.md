@@ -1,4 +1,4 @@
-# Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
+## Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
 
 ## 1- Launch an EC2 instance
 
