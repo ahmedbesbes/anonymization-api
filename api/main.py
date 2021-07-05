@@ -87,3 +87,8 @@ def extract_entities(user_request: UserRequestIn):
 
     anonymized_text = "".join(anonymized_text)
     return {"entities": entities, "anonymized_text": anonymized_text}
+
+
+@app.get("/")
+def hello():
+    return {"message": "hello datascientest"}
