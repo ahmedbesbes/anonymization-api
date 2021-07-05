@@ -91,4 +91,4 @@ def extract_entities(user_request: UserRequestIn):
 
 @app.get("/")
 def hello():
-    return {"message": "hello tout le monde"}
+    return {"message": "hello datascientest"}
