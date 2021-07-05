@@ -24,6 +24,7 @@ app = FastAPI()
 
 @app.post("/applications", response_model=Decision)
 async def create_application(id: int, application: Application):
+
     first_name = application.first_name
     last_name = application.last_name
     proba = random.random()
@@ -38,15 +39,6 @@ async def create_application(id: int, application: Application):
     return decision
 
 
-@app.get("/ids/")
-async def read_ids(id: int):
-    response = {"id": id}
-    return response
-
-
-@app.get("/items/")
-async def read_items(q: Optional[str] = Query(None, max_length=50, min_length=3)):
-    results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
-    if q:
-        results.update({"q": q})
-    return results
+@app.get("/")
+def greeting():
+    return {"message": "hello"}

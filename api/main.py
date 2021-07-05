@@ -7,6 +7,13 @@ import spacy
 
 
 def load_models():
+    """
+    load the models from disk
+    and put them in a dictionary
+
+    Returns:
+        dict: loaded models
+    """
     models = {
         "en_sm": spacy.load("api/ml/models/en_sm"),
         "fr_sm": spacy.load("api/ml/models/fr_sm"),
