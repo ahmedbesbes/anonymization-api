@@ -1,6 +1,24 @@
 ## Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
 
-## 1- Launch an EC2 instance
+The goal of this project is to streamline the process of building and deploying an inference API on AWS using Docker and Github actions.
+
+The API's goal is to anonymize text data by detecting named entities (names, organizations, locations) and returning an anonymized text.
+
+Here's a highlevel overview of the API.
+
+<p align="center">
+    <img src="./images/overview_api.png"/>
+</p>
+
+## 1- Develop the app locally
+
+The API route is defined in `api/main.py`
+
+A Dockerfile is defined to create an image for this API: pretty standard.
+
+A docker-compose to manage services between others (as for now, there's only one service: the API)
+
+## 2- Launch an EC2 instance
 
 Connect to your AWS account, go the EC2 section and pick a distribution. I recommend Ubuntu 20.04 LTS for this tutorial.
 
@@ -42,7 +60,7 @@ Then add to the instance security groups:
 
 Now the instance is ready to accept requests.
 
-## 2- SSH to the instance and configure it
+## 3- SSH to the instance and configure it
 
 SSH into the instance using your terminal.
 
@@ -50,7 +68,7 @@ SSH into the instance using your terminal.
 
 - Generate an ssh key and add it to your Github account so that it can perform git clones seamlessly
 
-## 3- Configure a Gihub Actions workflow
+## 4- Configure a Gihub Actions workflow
 
 1- Go to your repo and click on the **Actions** tab
 
