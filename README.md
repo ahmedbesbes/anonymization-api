@@ -1,5 +1,8 @@
 ## Deploy an inference API on AWS (EC2) using FastAPI Docker and Github Actions
 
+To learn more about this project: [medium blog post](https://towardsdatascience.com/how-to-deploy-a-machine-learning-model-with-fastapi-docker-and-github-actions-13374cbd638a)
+
+
 The goal of this project is to streamline the process of building and deploying an inference API on AWS using Docker and Github actions.
 
 The API's goal is to anonymize text data by detecting named entities (names, organizations, locations) and returning an anonymized text.
