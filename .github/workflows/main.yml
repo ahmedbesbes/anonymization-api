@@ -27,6 +27,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           script: |
+            sudo su
             rm -rf anonymization-api
             git clone git@github.com:ahmedbesbes/anonymization-api.git
             cd anonymization-api

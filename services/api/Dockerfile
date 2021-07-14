@@ -7,7 +7,7 @@ COPY . /api/api
 ENV PYTHONPATH=/api
 WORKDIR /api
 
-EXPOSE 5000
+EXPOSE 8000
 
 ENTRYPOINT ["uvicorn"]
-CMD ["api.main:app", "--host", "0.0.0.0:5000"]
+CMD ["api.main:app", "--host", "0.0.0.0"]

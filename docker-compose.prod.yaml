@@ -3,6 +3,8 @@ version: "3"
 services:
   anonymization-api:
     build: ./services/api
+    ports:
+      - 8000:8000
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.fastapi.rule=Host(`fastapi.ahmedbesbes.com`)"
