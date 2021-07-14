@@ -2,7 +2,7 @@ FROM python:3.7
 
 RUN pip install fastapi uvicorn spacy
 
-COPY ./api /api/api
+COPY . /api/api
 
 ENV PYTHONPATH=/api
 WORKDIR /api
