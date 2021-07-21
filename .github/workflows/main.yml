@@ -31,4 +31,5 @@ jobs:
             rm -rf anonymization-api
             git clone git@github.com:ahmedbesbes/anonymization-api.git
             cd anonymization-api
-            sudo docker-compose -f docker-compose.prod.yaml up --build -d
+            docker-compose down
+            docker-compose -f docker-compose.prod.yaml up --build -d
